@@ -26,31 +26,37 @@ Print the number of words
 
 
 ## PROGRAM:
-
-
-
+```
+DEVELOPED BY:JERUSHLIN JOSE J B
+REG NO:212222240039
 ```
 
+```
 import sys
-fp=open(sys.argv[1], 'r')
-count=0
-for line in fp:
-    list1=line.split()
-    count+=len(list1)
-print("No of words in a file",count)
+count = {}
+with open(sys.argv[1], 'r') as f:
+    for line in f:
+        for word in line.split():
+            if word not in count:
+                count[word] = 1
+            else:
+                count[word] += 1
+print(count)
+f.close()
+
 ```
 
 ### OUTPUT:
 
-![image](https://github.com/Jerushli/command-line-arguments-to-count-word/assets/120041243/cd32f586-e3d7-4c6d-9e64-720ae01ab45f)
+
+
+![image](https://github.com/Jerushli/command-line-arguments-to-count-word/assets/120041243/39b4abaa-f4d8-466c-b856-a84efb7d0fef)
 
 
 
-![image](https://github.com/Jerushli/command-line-arguments-to-count-word/assets/120041243/e13c836b-1639-4444-a286-9e9ace075db5)
 
 
-
-![image](https://github.com/Jerushli/command-line-arguments-to-count-word/assets/120041243/8f162b5b-633d-4dca-8b88-9280a4b64c83)
+![image](https://github.com/Jerushli/command-line-arguments-to-count-word/assets/120041243/2466fe46-f240-4542-9490-9b2b94d79503)
 
 
 
